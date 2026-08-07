@@ -4,14 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Revisão HTML e CSS</title>
+		<style>
+			* {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+			p {
+				font-size: 20px;
+			}
+			.classe {
+				color: red;
+			}
+			#nome {
+				color: green;
+			}
+		</style>
   </head>
   <body>
     <p>Esse é um parágrafo</p>
     <h1>Titulo 1</h1>
     <h2>Titulo 2</h2>
     <ol>
-      <li>Posição 1</li>
-      <li>Posição 2</li>
+      <li class="classe">Posição 1</li>
+      <li class="classe">Posição 2</li>
       <li>Posição 3</li>
     </ol>
     <ul>
@@ -36,8 +50,8 @@
     <table>
       <thead>
         <tr>
-          <th>Coluna 1</th>
-          <th>Coluna 2</th>
+          <th class="classe">Coluna 1</th>
+          <th class="classe">Coluna 2</th>
         </tr>
       </thead>
       <tbody>
