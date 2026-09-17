@@ -28,6 +28,7 @@
 			</div>
 		<?php endforeach; ?>
 	</div>
+	<p></p>
 	<?php
 	// Define the exercise lists and their descriptions
 	$exerciseLists = [
