@@ -28,6 +28,32 @@
 			</div>
 		<?php endforeach; ?>
 	</div>
+	<?php
+	// Define the exercise lists and their descriptions
+	$exerciseLists = [
+		"Exercicios/Lista1"
+		// "Exercicios/Lista2"
+	];
+	?>
+	<div class="container">
+		<?php foreach ($exerciseLists as $list): ?>
+			<div class="folder">
+				<h2><?php echo basename($list); ?></h2>
+				<?php 
+				// Scan the directory for exercises
+				$exerciseDir = __DIR__ . '/' . $list;
+				if (is_dir($exerciseDir)) {
+					$exerciseNumber = 1;
+					while (file_exists($exerciseDir . '/Exercicio' . $exerciseNumber . '.php')): ?>
+						<a href="<?php echo $list . '/Exercicio' . $exerciseNumber . '.php'; ?>" class="button">
+							Abrir Exercicio <?php echo $exerciseNumber; ?>
+						</a>
+						<?php $exerciseNumber++; ?>
+					<?php endwhile; 
+				} ?>
+			</div>
+		<?php endforeach; ?>
+	</div>
 
 </body>
 
