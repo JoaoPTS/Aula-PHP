@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Exercício 8</title>
+	<title>Exercício 10</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -16,7 +16,7 @@
 		<a class="btn btn-primary ms-3" href="/index.php">Voltar para a Página Principal</a>
 	</nav>
 	<div class="container mt-5">
-		<h1 class="text-left" style="font-size: 20px;">Cálculo da área de um círculo:</h1>
+		<h1 class="text-left" style="font-size: 20px;">Cálculo do perímetro de um círculo:</h1>
 		<form action="" method="post" class="mt-4">
 			<div class="d-flex flex-column align-items-start gap-2 mb-3">
 				<div class="d-flex align-items-center gap-2">
@@ -30,10 +30,10 @@
 	<?php
 	$raio = $_POST['raio'] ?? 0;
 
-	$area = pi() * $raio ** 2;
+	$perimetro = 2 * pi() * $raio;
 	?>
 	<div class="container mt-3">
-		<h2 class="text-left" style="font-size: 20px;">Resultado: <?php echo 'Área = ' . number_format($area, 2, ',', '.'); ?></h2>
+		<h2 class="text-left" style="font-size: 20px;">Resultado: <?php echo 'Perímetro = ' . number_format($perimetro, 2, ',', '.'); ?></h2>
 	</div>
 </body>
 
