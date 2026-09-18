@@ -30,7 +30,7 @@
 	</div>
 	<p></p>
 	<?php
-	// Define the exercise lists and their descriptions
+	
 	$exerciseLists = [
 		"Exercicios/Lista1"
 		// "Exercicios/Lista2"
@@ -41,7 +41,6 @@
 			<div class="folder">
 				<h2><?php echo basename($list); ?></h2>
 				<?php 
-				// Scan the directory for exercises
 				$exerciseDir = __DIR__ . '/' . $list;
 				if (is_dir($exerciseDir)) {
 					$exerciseNumber = 1;
