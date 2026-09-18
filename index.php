@@ -45,9 +45,9 @@
 				$exerciseDir = __DIR__ . '/' . $list;
 				if (is_dir($exerciseDir)) {
 					$exerciseNumber = 1;
-					while (file_exists($exerciseDir . '/Exercicio' . $exerciseNumber . '.php')): ?>
-						<a href="<?php echo $list . '/Exercicio' . $exerciseNumber . '.php'; ?>" class="button">
-							Abrir Exercicio <?php echo $exerciseNumber; ?>
+					while (file_exists($exerciseDir . '/Exercício' . $exerciseNumber . '.php')): ?>
+						<a href="<?php echo $list . '/Exercício' . $exerciseNumber . '.php'; ?>" class="button">
+							Abrir Exercício <?php echo $exerciseNumber; ?>
 						</a>
 						<?php $exerciseNumber++; ?>
 					<?php endwhile;
