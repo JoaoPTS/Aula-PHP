@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Exercício 4</title>
+	<title>Exercício 5</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -16,34 +16,24 @@
 		<a class="btn btn-primary ms-3" href="/index.php">Voltar para a Página Principal</a>
 	</nav>
 	<div class="container mt-5">
-		<h1 class="text-left" style="font-size: 20px;">Média de 3 notas:</h1>
+		<h1 class="text-left" style="font-size: 20px;">Conversão de Temperatura C° para F°:</h1>
 		<form action="" method="post" class="mt-4">
 			<div class="d-flex flex-column align-items-start gap-2 mb-3">
 				<div class="d-flex align-items-center gap-2">
-					<label for="nota1">Nota 1:</label>
-					<input type="number" step="0.01" id="nota1" name="nota1" class="form-control" style="width: 100px;" required>
-				</div>
-				<div class="d-flex align-items-center gap-2">
-					<label for="nota2">Nota 2:</label>
-					<input type="number" step="0.01" id="nota2" name="nota2" class="form-control" style="width: 100px;" required>
-				</div>
-				<div class="d-flex align-items-center gap-2">
-					<label for="nota3">Nota 3:</label>
-					<input type="number" step="0.01" id="nota3" name="nota3" class="form-control" style="width: 100px;" required>
+					<label for="temp">Temperatura C°:</label>
+					<input type="number" step="0.01" id="temp" name="temp" class="form-control" style="width: 100px;" required>
 				</div>
 			</div>
 			<button type="submit" class="btn btn-success" style="font-size: 20px;">Calcular</button>
 		</form>
 	</div>
 	<?php
-	$nota1 = $_POST['nota1'] ?? 0;
-	$nota2 = $_POST['nota2'] ?? 0;
-	$nota3 = $_POST['nota3'] ?? 0;
+	$temp = $_POST['temp'] ?? 0;
 
-	$media = ($nota1 + $nota2 + $nota3) / 3;
+	$temp_f = ($temp * 9/5) + 32;
 	?>
 	<div class="container mt-3">
-		<h2 class="text-left" style="font-size: 20px;">Resultado: <?php echo 'Média = ' . number_format($media, 2, ',', '.'); ?></h2>
+		<h2 class="text-left" style="font-size: 20px;">Resultado: <?php echo 'Temperatura ' . number_format($temp, 2, ',', '.') . 'C° = ' . number_format($temp_f, 2, ',', '.') . 'F°'; ?></h2>
 	</div>
 </body>
 
