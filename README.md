@@ -5,3 +5,5 @@ Repositório para as aulas sobre PHP
 ```
 php -S localhost:8080
 ```
+
+Somente é necessario abrir o localhost para navegar pelo index.

@@ -9,7 +9,12 @@
 </head>
 
 <body>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+		crossorigin="anonymous"></script>
+	<nav class="navbar navbar-light bg-light">
+		<a class="btn btn-primary ms-3" href="/index.php">Voltar para a Página Principal</a>
+	</nav>
 	<div class="container py-3">
 		<h1>Exemplo de Funções em PHP</h1>
 		<form method="post">
@@ -32,7 +37,7 @@
 				$qtde = strlen($nome);
 				echo "<p>Qtde de caracteres do nome: $qtde</p>";
 				echo "<p>Maiúsculo do nome: " . strtoupper($nome) . "</p>";
-				$s = str_replace("a","4", $nome);
+				$s = str_replace("a", "4", $nome);
 				echo "<p>Substituição de 'a' por '4': $s</p>";
 				date_default_timezone_set('America/Sao_Paulo');
 				$dia = date("d");
@@ -49,7 +54,7 @@
 
 				$resultado = 10.34 * 2.9;
 				echo "<p>Resultado: $resultado</p>";
-				$resultado = number_format($resultado,2,",",".");
+				$resultado = number_format($resultado, 2, ",", ".");
 				echo "<p>Resultado formatado: $resultado</p>";
 			}
 		}

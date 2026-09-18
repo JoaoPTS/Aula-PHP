@@ -30,17 +30,18 @@
 	</div>
 	<p></p>
 	<?php
-	
+
 	$exerciseLists = [
-		"Exercicios/Lista1"
-		// "Exercicios/Lista2"
+		"Exercicios/Lista1",
+		"Exercicios/Lista2",
+		"Exercicios/Lista3"
 	];
 	?>
 	<div class="container">
 		<?php foreach ($exerciseLists as $list): ?>
 			<div class="folder">
 				<h2><?php echo basename($list); ?></h2>
-				<?php 
+				<?php
 				$exerciseDir = __DIR__ . '/' . $list;
 				if (is_dir($exerciseDir)) {
 					$exerciseNumber = 1;
@@ -49,7 +50,7 @@
 							Abrir Exercicio <?php echo $exerciseNumber; ?>
 						</a>
 						<?php $exerciseNumber++; ?>
-					<?php endwhile; 
+					<?php endwhile;
 				} ?>
 			</div>
 		<?php endforeach; ?>
