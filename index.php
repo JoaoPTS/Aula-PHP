@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pagina Inicia</title>
+	<title>Página Inicial</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,6 +25,33 @@
 				<h2><?php echo $folder; ?></h2>
 				<p><?php echo $description; ?></p>
 				<a href="<?php echo $folder; ?>/index.php" class="button">Abrir <?php echo $folder; ?></a>
+			</div>
+		<?php endforeach; ?>
+	</div>
+	<p></p>
+	<?php
+
+	$exerciseLists = [
+		"Exercicios/Lista1",
+		"Exercicios/Lista2",
+		"Exercicios/Lista3"
+	];
+	?>
+	<div class="container">
+		<?php foreach ($exerciseLists as $list): ?>
+			<div class="folder">
+				<h2><?php echo basename($list); ?></h2>
+				<?php
+				$exerciseDir = __DIR__ . '/' . $list;
+				if (is_dir($exerciseDir)) {
+					$exerciseNumber = 1;
+					while (file_exists($exerciseDir . '/Exercicio' . $exerciseNumber . '.php')): ?>
+						<a href="<?php echo $list . '/Exercicio' . $exerciseNumber . '.php'; ?>" class="button">
+							Abrir Exercício <?php echo $exerciseNumber; ?>
+						</a>
+						<?php $exerciseNumber++; ?>
+					<?php endwhile;
+				} ?>
 			</div>
 		<?php endforeach; ?>
 	</div>
