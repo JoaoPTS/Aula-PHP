@@ -41,6 +41,7 @@
             echo "<p>Nenhum aluno cadastrado.</p>";
         }
     ?>
+    <a href="src/cadastro.php" class="btn btn-primary">Novo Aluno</a>
   </div>
 </body>
 </html>

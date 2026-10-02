@@ -18,6 +18,7 @@
 	?>
 
 	<div class="container py-3">
+	<a href="../" class="btn btn-primary">Voltar</a>
 		<h1>Cadastro de alunos</h1>
 		<form action="" method="post">
 			<div class="mb-3">
