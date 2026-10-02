@@ -14,7 +14,7 @@
 		crossorigin="anonymous"></script>
 
 	<?php
-		require_once "../database/conexao.php";
+		require_once "database/conexao.php";
 	?>
 
 	<div class="container py-3"></div>
