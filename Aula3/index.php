@@ -28,11 +28,11 @@
             echo "<table class='table'>";
             echo "<thead><tr><th>ID</th><th>Nome</th><th>RA</th></tr></thead>";
             echo "<tbody>";
-            foreach ($dados as $aluno) {
+            foreach ($dados as $alunos) {
                 echo "<tr>";
-                echo "<td>" . $aluno['id'] . "</td>";
-                echo "<td>" . $aluno['nome'] . "</td>";
-                echo "<td>" . $aluno['ra'] . "</td>";
+                echo "<td>" . $alunos['idalunos'] . "</td>";
+                echo "<td>" . $alunos['nome'] . "</td>";
+                echo "<td>" . $alunos['ra'] . "</td>";
                 echo "</tr>";
             }
             echo "</tbody>";
