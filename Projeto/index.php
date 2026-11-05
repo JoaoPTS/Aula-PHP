@@ -1,4 +1,7 @@
 <?php
+  require_once './src/bancos_de_dados/conexao.php';
+  require_once './src/implementacoes/servidorImplematecao.php';
+  session_start();
 
 ?>
 
@@ -13,7 +16,15 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
-    
+    <nav>
+
+    </nav>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
     <script src="" async defer></script>
   </body>
 </html>
